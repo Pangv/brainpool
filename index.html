@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="Shortcut icon" href="http://via.placeholder.com/256x256/44c6ac/000000?text=?">
+
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="stylesheets/main.css">
+
+
+    <title>brainpool</title>
+    <!--  -->
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                    <a class="navbar-brand" href="#0"><img src="http://via.placeholder.com/235x64/44c6ac/000000/?text=logo" alt=""></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="navbar-left">
+                        <ul class="nav navbar-nav">
+                            <li><a class="" role="button" @click.stop.prevent="alert('Zorry das geht noch nicht.')">Ideen erstellen</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#0">Hilfe</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="leading">
+                    brainpool <small>Ideen Management</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <section class="col-sm-12">
+                    <h1>Aktuelle Ideen</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore maiores dignissimos magnam ducimus nobis, at exercitationem, repellat itaque fugiat labore recusandae tempora illum nulla quae perferendis molestias perspiciatis minima blanditiis.</p>
+                </section>
+            </div>
+            <div class="row ideas">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 idea" v-for="idea in ideas">
+                    <div class="idea-title">{{idea.title}}</div>
+                    <div class="idea-author">{{idea.author.name}}</div>
+                    <p class="idea-desc">{{idea.desc}}</p>
+                    <div class="badge">Likes {{idea.likes}}</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container-fluid">
+            <ul>
+                <h5>Top 5 Ideen</h5>
+                <li v-for="topidea in topIdeas">{{topidea.title}}</li>
+
+            </ul>
+            <ul>
+                <h5>Top 5 Ideatoren</h5>
+                <li v-for="topmember in topMembers">{{topmember.name}} <span class="badge">{{topmember.stars }} <span class="glyphicon glyphicon-star"></span></span></li>
+            </ul>
+            <ul>
+                <h5>Verlinkung</h5>
+                <li><a href="">Pool Wiki</a></li>
+                <li><a href="">fi-intranet</a></li>
+            </ul>
+        </footer>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    <script src="app.js"></script>
+    <script>
+    </script>
+
+</body>
+
+</html>
