@@ -46,8 +46,8 @@
 
         <div class="jumbotron">
             <div class="container">
-                <h1 class="leading">
-                    brainpool <small>Ideen Management</small>
+                <h1 class="leading" >
+                   <span id="type"></span><small>Ideen Management</small>
                 </h1>
             </div>
         </div>
@@ -81,8 +81,8 @@
             </ul>
             <ul>
                 <h5>Verlinkung</h5>
-                <li><a href="">Pool Wiki</a></li>
-                <li><a href="">fi-intranet</a></li>
+                <li><a href="#0">Wiki</a></li>
+                <li><a href="#0">intranet</a></li>
             </ul>
         </footer>
 
@@ -94,10 +94,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
 
 
     <script src="app.min.js"></script>
     <script>
+        $('#type').typeIt({
+            strings: ['brainpool', 'brainfactory', 'ideenfabrik', 'brainpool'],
+            speed: 200,
+            breakLines: false,
+            startDelay: 1200,
+            deleteDelay: 2000,
+        });
     </script>
 
 </body>
